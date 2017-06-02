@@ -1,0 +1,20 @@
+{
+  "name": "WEBDESIGN",
+  "authors": [
+    "Den"
+  ],
+  "description": "bw",
+  "main": "index",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "slick": "*"
+  }
+}

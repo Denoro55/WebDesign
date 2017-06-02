@@ -1,0 +1,298 @@
+.main-content{
+	position: relative;
+	@include box-shadow(0 -12px 12px #9c9ea3);
+	//height: 1100px;
+  &:before{
+    content: "";
+    display: block;
+    height: 3px;
+    @include box-shadow(0 3px 4px #ababab);
+    position: absolute;
+    top: -4px;
+    height: 4px;
+    width: 100%;
+  }
+}
+.carousel{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 910px;
+	height: 390px;
+	background: url(../img/bg.png);
+	top: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	@include tablet{
+      	background-size: contain;
+      	background-repeat: no-repeat;
+      	width: 660px;
+      	height: 288px;
+      	text-align: inherit;
+    }
+    @include mini-table{
+      	background-size: contain;
+      	background-repeat: no-repeat;
+      	width: 400px;
+      	height: 230px;
+      	text-align: inherit;
+    }
+    @include mobile{
+      	width: 230px;
+      	height: 180px;
+      	text-align: inherit;
+      	background: url(../img/bgs.png);
+      	background-size: contain;
+      	background-repeat: no-repeat;
+    }
+
+}
+.slide{
+	width: 910px;
+}
+.slider{
+	position: absolute;
+	top: -12px;
+}
+.slick-slide {
+      margin: 28px 20px;
+      @include tablet{
+      	margin: 0px 20px;
+    }
+      @include mini-table{
+      	margin: 48px 20px;
+    }
+    @include mobile{
+      	margin: 14px 20px;
+    }
+}
+.slick-track{
+	padding-top: 13px;
+	@include tablet{
+      	padding-top: 33px;
+    }
+    @include mini-table{
+      	padding-top: 10px;
+    }
+    @include mobile{
+      	padding-top: 10px;
+    }
+}
+.slick-slide:nth-child(3n+2) {
+      margin: -14px 20px;
+      @include tablet{
+      	margin: -24px 20px;
+    }
+      @include mini-table{
+      	margin: 18px 20px;
+    }
+    @include mobile{
+      	margin: 14px 20px;
+    }
+
+}
+.slick-slide img {
+      width: 100%;
+      @include tablet{
+      	padding: 0 0px;
+      	@include box-sizing();
+      	width: 100%;
+      	margin: 0 auto;
+      }
+      @include mini-table{
+      	padding: 0 0px;
+      	@include box-sizing();
+      	width: 100%;
+      	margin: 0 auto;
+      }
+      @include mobile{
+      	padding: 0 0px;
+      	@include box-sizing();
+      	width: 60%;
+      	margin: 0 auto;
+      }
+}
+.slick-prev,.slick-next{
+  width: 50px;
+  height: 50px;
+}
+.slick-prev:before, .slick-next:before{
+	width: 50px;
+	height: 50px;
+	display: block;
+	content: "";
+	border-radius: 50%;
+	@include box-shadow(0 0 5px #292930);
+  @include mini-table{
+    @include box-shadow(0 0 0);
+  }
+  @include mobile{
+    @include box-shadow(0 0 0);
+  }
+}
+.slick-prev:before{
+	z-index: 2006;
+	background: url(../img/left-arrow.png) center center no-repeat,
+	radial-gradient(circle at 50% 50%,#fcfcfc,#cccccc);
+}
+.slick-next:before{
+	z-index: 2006;
+	background: url(../img/right-arrow.png) center center no-repeat,
+	radial-gradient(circle at 50% 50%,#fcfcfc,#cccccc);
+}
+.slider-bg{
+	background: white;
+	height: 50px;
+	position: absolute;
+	left: -15px;
+	bottom: 15px;
+	width: 940px;
+	@include tablet{
+      	width: 691px;
+    }
+    @include mini-table{
+      	width: 431px;
+    }
+    @include mobile{
+      	width: 261px;
+      	height: 100px;
+      	bottom: -78px;
+    }
+}
+.slider-bg-gradient{
+	height: 50px;
+	background: linear-gradient(to right, #7b7b7b 0%, transparent 20%,transparent 80%, #7b7b7b 100%);
+	@include mobile{
+      	height: 100px;
+    }
+}
+/*.bg-left{
+	display: block;
+	position: absolute;
+	top: -85px;
+	border: 15px solid transparent;
+	border-bottom: 70px solid red;
+	background: linear-gradient(#777777,#d3d3d3);
+	border-right: 0 solid red;00
+}*/
+.bg-left{
+	position:absolute;
+	top: -70px;
+}
+.bg-right{
+	position:absolute;
+	top: -70px;
+	right: 0px;
+}
+.bg__list{
+	padding-top: 13px;
+  @include mini-table{
+    text-align: center;
+  }
+}
+.bg__list-item{
+	display: inline-block;
+	margin: 0 25px;
+	@include tablet{
+    margin: 0 16px;
+  }
+  @include mini-table{
+    margin: 0 10px;
+  }
+}
+.button{
+		width: 165px;
+		height: 30px;
+		font-size: 16px;
+		font-family: 'Calibri';
+		font-weight: regular;
+		color: #8c8c8c;
+		line-height: 30px;
+		@include box-shadow(-1px 1px 0 #a0a0a0);
+		&:hover{
+			cursor: pointer;
+		}
+		@include tablet{
+      	width: 136px;
+      	text-align: center;
+      	font-size: 14px;
+    }
+    @include mini-table{
+      	width: 80px;
+      	text-align: center;
+      	font-size: 12px;
+    }
+    @include mobile{
+    	  margin-bottom: 15px;
+      	width: 95px;
+      	text-align: center;
+      	font-size: 12px;
+    }
+}
+.btn-active{
+	.button{
+  	background: linear-gradient(to bottom, #e0e0e0, #c3c2c2);
+  	@include box-shadow(inset -1px 2px 1px rgba(#717171,.5));
+  	color: #ffffff;
+	}
+}
+.shadow__slider{
+	position: absolute;
+}
+.shadow__left{
+  	  left: -19px;
+      bottom: -14px;
+      opacity: 0.4;
+    @include tablet{
+      left: -18px;
+      bottom: 38px;
+      width: 250px;
+    }
+    @include mini-table{
+      left: -8px;
+      bottom: 60px;
+      width: 153px;
+    }
+    @include mobile{
+      display: none;
+    }
+}
+.shadow__center{
+    	left: 275px;
+      bottom: -14px;
+      opacity: 0.4;
+    @include tablet{
+      left: 208px;
+      bottom: 25px;
+      width: 250px;
+    }
+    @include mini-table{
+      left: 126px;
+      bottom: 70px;
+      width: 153px;
+    }
+    @include mobile{
+      left: 9px;
+      bottom: 13px;
+      width: 211px;
+    }
+}
+.shadow__right{
+  	  right: -19px;
+      bottom: -14px;
+      opacity: 0.4;
+    @include tablet{
+      right: -8px;
+      bottom: 29px;
+      width: 250px;
+    }
+    @include mini-table{
+      right: -8px;
+      bottom: 60px;
+      width: 153px;
+    }
+    @include mobile{
+      display: none;
+    }
+}

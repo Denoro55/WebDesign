@@ -1,0 +1,408 @@
+.content{
+	padding-top: 360px;
+	@include tablet{
+      	padding-top: 300px;
+    }
+    @include mini-table{
+      	padding-top: 170px;
+    }
+    @include mobile{
+      	padding-top: 200px;
+    }
+}
+.section-one{
+	//height: 440px;
+}
+.works__top{
+	height: 90px;
+	position: relative;
+	background: url(../img/shadow.png) -50px bottom no-repeat;
+	@include tablet{
+      	background: url(../img/shadow.png) -25px bottom no-repeat;
+      	background-size: contain;
+    }
+    @include mini-table{
+      	height: inherit;
+    }
+}
+.works__top-gradient{
+}
+.works__item{
+	display: inline-block;
+	width: 260px;
+	height: 88px;
+	margin: 0 10px;
+	border: 1px solid #bcbcbc;
+	background: linear-gradient(to top,#ececec,#c7c7c7);
+	&:first-child{
+		margin-left: 60px;
+		@include tablet{
+      	margin-left: 10px;
+    }
+    @include mini-table{
+      	margin: 10px auto;
+      	display: block;
+    }
+	}
+	@include tablet{
+      	margin: 0 5px;
+      	width: 235px;
+    }
+    @include mini-table{
+      	margin: 10px auto;
+      	display: block;
+    }
+}
+.works-active{
+	background: white;
+}
+.works__item-left{
+	height: 90px;
+	width: 80px;
+}
+.works__item{
+	&:hover{
+		cursor: pointer;
+	}
+	&:nth-child(1){
+		.works__item-left{
+		background: url(../img/icon.png) center center no-repeat;
+	}
+}
+	&:nth-child(2){
+		.works__item-left{
+		background: url(../img/computer-icon.png) center center no-repeat;
+	}
+}
+	&:nth-child(3){
+		.works__item-left{
+		background: url(../img/icona.png) center center no-repeat;
+	}
+}
+}
+.works__item-left,.works__item-right{
+ display: inline-block;
+ vertical-align: middle;
+}
+.works__item-right{
+	max-width: 150px;
+}
+.works__item-title{
+	font-size: 20px;
+	font-family: 'Calibri';
+	color: #2477ad;
+	font-weight: regular;
+	@include mobile{
+      	font-size: 16px;
+    }
+}
+.works__item-desc{
+	font-size: 12px;
+	font-family: 'Calibri';
+	color: #b8b8b8;
+	font-weight: regular;
+}
+.works__bottom{
+	padding-bottom: 45px;
+	//height: 350px;
+	width: 820px;
+	margin: 0 auto;
+	position: relative;
+	&:after{
+		content: "";
+		display: block;
+		@include box-shadow(0 20px 20px #adadad);
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+	@include mini-table{
+      	width: 100%;
+    }
+}
+.works__bottom-left{
+	width: 410px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 70px;
+		height: 270px;
+		width: 1px;
+		background: linear-gradient(to bottom, transparent 0%, #d5d5d5 40%,#d5d5d5 60%,transparent 100%);
+		@include mini-table{
+      	display: none;
+    }
+    @include tablet{
+      	display: none;
+    }
+
+	}
+	@include tablet{
+      	width: 100%;
+    }
+}
+.works__bottom-list{
+	padding: 35px 0 0 0;
+}
+.works__bottom-item{
+	border-radius: 5px;
+	width: 360px;
+	height: 50px;
+	border: 1px solid #dedede;
+	background: linear-gradient(to right, #ededed,#fbfafa);
+	margin: 25px 0;
+	&:first-child{
+		margin: 0 0;
+		@include tablet{
+      	margin: 0 auto;
+    }
+	}
+	@include tablet{
+      	margin: 25px auto;
+    }
+    @include mobile{
+      	width: 245px;
+		height: 100px;
+    }
+}
+.works__bottom-img{
+	@include inlineblock();
+	width: 40px;
+	height: 100%;
+	background: url(../img/keksitis.png) center center no-repeat;
+	@include mobile{
+      	height: 55%;
+    }
+}
+.works__bottom-text{
+	@include inlineblock();
+	color: #9f9999;
+	font-size: 14px;
+	font-family: 'Calibri';
+	font-weight: regular;
+	width: 190px;
+}
+.works__bottom-btn{
+	@include transition(all .6s ease-out);
+	@include inlineblock();
+	width: 105px;
+	height: 30px;
+	border: 1px solid #dcdcdc;
+	color: #b3b2b2;
+	font-size: 14px;
+	font-family: 'Calibri';
+	font-weight: regular;
+	text-align: center;
+	line-height: 30px;
+	&:hover{
+		border: 1px solid #a9a9a9;
+		color: #a9a9a9;
+	}
+	@include mobile{
+      	margin-left: 25%;
+    }
+}
+.works__bottom-right{
+	background: linear-gradient(to top, #e8e8e8 0%,#f8f7f7 100%);
+	border-radius: 5px;
+	vertical-align: top;
+	margin: 35px 0 0 40px;
+	display: inline-block;
+	width: 360px;
+	//height: 295px;
+	border: 1px solid #d9d9d9;
+	@include tablet{
+      	display: block;
+      	margin: 0 auto;
+    }
+    @include mobile{
+      	width: 310px;
+    }
+}
+.works__bottom-right-title{
+	background: #f5f3f3;
+	@include box-sizing();
+	padding-left: 20px;
+	margin: 15px auto;
+	border: 1px solid #d0cece;
+	line-height: 50px;
+	width: 330px;
+	height: 50px;
+	border-radius: 5px;
+	font-size: 24px;
+	font-family: 'Calibri';
+	color: #b0acac;
+	font-weight: regular;
+	@include mobile{
+      	width: 245px;
+    }
+}
+.team__list{
+	@include mobile{
+      	text-align: center;
+    }
+}
+.team__item{
+	margin: 10px 16px;
+	border-radius: 5px;
+	border: 1px solid #dedede;
+	width: 77px;
+	height: 77px;
+	padding: 2px;
+	display: inline-block;
+	&:nth-child(1){
+		.team__item-block{
+			background: url(../img/Layer-21.png) center center no-repeat,
+			radial-gradient(circle at 50% 50%, #ffffff, #e1e1e1);
+		}
+	}
+	&:nth-child(2){
+		.team__item-block{
+			background: url(../img/Layer-23.png) center center no-repeat,
+			radial-gradient(circle at 50% 50%, #ffffff, #e1e1e1);
+		}
+	}
+
+&:nth-child(3){
+		.team__item-block{
+			background: url(../img/Layer-25.png) center center no-repeat,
+			radial-gradient(circle at 50% 50%, #ffffff, #e1e1e1);
+		}
+	}
+
+&:nth-child(4){
+		.team__item-block{
+			background: url(../img/Layer-22.png) center center no-repeat,
+			radial-gradient(circle at 50% 50%, #ffffff, #e1e1e1);
+		}
+	}
+
+&:nth-child(5){
+		.team__item-block{
+			background: url(../img/Layer-24.png) center center no-repeat,
+			radial-gradient(circle at 50% 50%, #ffffff, #e1e1e1);
+		}
+	}
+
+&:nth-child(6){
+		.team__item-block{
+			background: url(../img/Layer-26.png) center center no-repeat,
+			radial-gradient(circle at 50% 50%, #ffffff, #e1e1e1);
+		}
+	}
+
+}
+.team__item-block{
+	width: 75px;
+	height: 75px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+}
+.afterworks{
+	height: 205px;
+	padding: 75px 0 0 40px;
+	background: url(../img/shadow-bottom.png) -60px top no-repeat;
+	@include tablet{
+		background: url(../img/shadow-bottom.png) -25px top no-repeat;
+    	background-size: contain;
+      	padding: 75px 0 0 0px;
+    }
+    @include mini-table{
+      	background: url(../img/shadow-bottom.png) -8px top no-repeat;
+    	background-size: contain;
+    }
+     @include mobile{
+      	height: 310px;
+    }
+}
+.quote{
+	max-width: 835px;
+	height: 135px;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	background: linear-gradient(to top, #ededed,#fbf9f9);
+	@include mini-table{
+      	height: 160px;
+    }
+    @include mobile{
+      	height: 290px;
+    }
+}
+.quate__img{
+	height: 100%;
+	width: 65px;
+	background: url(../img/man-icon.png) center 80% no-repeat;
+	display: inline-block;
+	@include mobile{
+      	background: url(../img/man-icon.png) center 40% no-repeat;
+    }
+}
+.quote__desc{
+	width: 749px;
+	height: 116px;
+	@include box-sizing();
+	margin-top: 12px;
+	padding: 17px 45px 0 92px;
+	color: #d1d1d1;
+	font-size: 12px;
+	font-family: 'Calibri';
+	font-weight: regular;
+	background: url(../img/bg-copy-9.png) 0 0 no-repeat;
+	background-size: contain;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	@include tablet{
+      	width: 630px;
+      	height: 100px;
+    }
+    @include mini-table{
+      	background: url(../img/bg-copy-9s.png) 0 0 no-repeat;
+      	padding: 16px 15px 0 90px;
+      	width: 360px;
+   		height: 139px;
+   		font-size: 11px;
+    }
+    @include mobile{
+      	background: url(../img/bg-copy-9vs.png) 0 0 no-repeat;
+      	padding: 16px 15px 0 90px;
+      	width: 230px;
+   		height: 272px;
+   		font-size: 11px;
+    }
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 14px;
+		left: 60px;
+		width: 20px;
+		height: 15px;
+		background: url(../img/1.png) center center no-repeat;
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 16px;
+		right: 25px;
+		width: 20px;
+		height: 15px;
+		background: url(../img/2.png) center center no-repeat;
+	}
+}
+.quote__desc-name{
+	color: #b1b0b0;
+	font-size: 14px;
+	font-family: 'Calibri';
+	font-weight: regular;
+	position: absolute;
+	bottom: 13px;
+	right: 70px;
+}
